@@ -1,0 +1,68 @@
+alias: Tablet Light / Dark Mode Automation
+triggers:
+  - at: "06:30:00"
+    trigger: time
+  - at: "17:25:00"
+    trigger: time
+conditions: []
+actions:
+  - choose:
+      - conditions:
+          - condition: time
+            after: "06:29:59"
+            before: "06:30:00"
+        sequence:
+          - action: rest_command.fully_kiosk_restart
+            data: {}
+          - delay:
+              hours: 0
+              minutes: 0
+              seconds: 5
+              milliseconds: 0
+          - data:
+              url: >-
+                [YOUR_TABLET_LIGHT_DASHBOARD_URL]
+            target:
+              device_id: [Your_Device_ID]
+            action: fully_kiosk.load_url
+          - parallel:
+              - target:
+                  entity_id: switch.[Your_Device}_screen
+                action: switch.turn_off
+                data: {}
+              - data:
+                  value: 0
+                target:
+                  entity_id: number.[Your_Device}_screen_brightness
+                action: number.set_value
+        alias: Daytime
+      - conditions:
+          - condition: time
+            after: "17:24:59"
+            before: "17:25:00"
+        sequence:
+          - action: rest_command.fully_kiosk_restart
+            data: {}
+          - delay:
+              hours: 0
+              minutes: 0
+              seconds: 5
+              milliseconds: 0
+          - data:
+              url: >-
+                [YOUR_TABLET_DARK_DASHBOARD_URL]
+            target:
+              device_id: [Your_Device_ID]
+            action: fully_kiosk.load_url
+          - parallel:
+              - target:
+                  entity_id: switch.[Your_Device}_screen
+                action: switch.turn_off
+                data: {}
+              - data:
+                  value: 0
+                target:
+                  entity_id: number.[Your_Device}_screen_brightness
+                action: number.set_value
+        alias: Night
+mode: single

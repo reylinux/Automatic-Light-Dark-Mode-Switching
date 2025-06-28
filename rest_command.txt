@@ -1,0 +1,4 @@
+rest_command:
+  fully_kiosk_restart:
+    url: "http://[YOUR_TABLET_IP]:2323/?cmd=restartApp&password=[YOUR_FULLY_REMOTE_PASSWORD]"
+    method: get
