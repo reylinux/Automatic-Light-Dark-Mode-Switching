@@ -19,5 +19,7 @@ These are included in:
 
 While not the most elegant method, it’s proven to be stable and consistent, especially compared to more dynamic UI hacks that break on reload or sleep states.
 
-If you’re facing similar issues with visual consistency or dashboard legibility — give this a try!
 
+If you enjoyed this post or found it helpful, you might also like these related projects and setups:
+- 🧲 [Magnetic Tablet Mount with Charging](https://github.com/reylinux/Wall-Mounted-Tablet) – A simple and clean way to mount your dashboard tablet with built-in charging
+- 🌓 [Dark Transparent Tablet Dashboard](https://github.com/reylinux/Dark-Transparent-Tablet-Dashboard) – A sleek, minimal, and transparent UI for wall-mounted tablets
