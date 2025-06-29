@@ -1,8 +1,12 @@
 Managing visibility in Home Assistant dashboards can be tricky, especially when trying to maintain usability during both daytime and nighttime. I’ve created two separate dashboards — one optimized for light mode and one for dark mode — to tackle this.
 ![Banner](https://github.com/user-attachments/assets/69eff534-a4cd-4fb8-8fb9-6f68de6ffc8b)
 
+📋 Requirements
 
-After a lot of trial and error, research, AI experimentation, and help from the app developer, I finally found a reliable way to automate the switching between them.
+To make this work, you'll need:
+- ✅ [Fully Kiosk Browser](https://www.fully-kiosk.com/) with Plus Subscription
+
+This setup depends on Fully Kiosk’s ability to receive remote commands and restart the app, which is only available in the Plus version.
 
 **🛠️ The Solution**
 
